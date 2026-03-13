@@ -1034,6 +1034,18 @@ body::after {
 
 .contact-detail-row { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--off-white); margin-bottom: 10px; }
 .contact-detail-row svg { color: var(--blue-bright); flex-shrink: 0; }
+.contact-social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.contact-social-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.78rem; font-weight: 500; color: var(--off-white);
+  background: var(--glass); border: 1px solid var(--glass-border);
+  padding: 8px 16px; border-radius: 100px;
+  text-decoration: none;
+  transition: color var(--transition), border-color var(--transition), background var(--transition), transform var(--transition);
+}
+.contact-social-btn svg { color: var(--blue-bright); flex-shrink: 0; transition: color var(--transition); }
+.contact-social-btn:hover { color: var(--white); border-color: rgba(41,121,255,0.4); background: rgba(41,121,255,0.08); transform: translateY(-2px); }
+.contact-social-btn:hover svg { color: var(--white); }
 
 /* Form */
 .contact-form-wrap {
