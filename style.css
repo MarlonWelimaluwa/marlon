@@ -593,7 +593,7 @@ body::after {
 .project-img-wrap {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
   background: var(--bg-3);
 }
 .project-img-box {
