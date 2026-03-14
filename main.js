@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (formError) {
         formError.style.display = 'block';
         formError.textContent = err.message?.includes('not configured')
-          ? '⚠️ EmailJS not configured yet — add your credentials in main.js.'
-          : '❌ Something went wrong. Please email me directly.';
+            ? '⚠️ EmailJS not configured yet — add your credentials in main.js.'
+            : '❌ Something went wrong. Please email me directly.';
       }
       btnSpan.textContent = orig;
       submitBtn.disabled = false;
@@ -175,5 +175,27 @@ document.addEventListener('DOMContentLoaded', () => {
   ===================== */
   const yr = document.getElementById('currentYear');
   if (yr) yr.textContent = new Date().getFullYear();
+
+
+  /* =====================
+     10. TOOLS FILTER
+  ===================== */
+  const filterBtns = document.querySelectorAll('.tf-btn');
+  const toolCards  = document.querySelectorAll('.tools-grid .tool-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      toolCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
 
 });

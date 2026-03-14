@@ -532,7 +532,7 @@
       <div>
         <span class="code-tag">// tools_i_have_built.forEach(tool =&gt; deploy())</span>
         <h2 class="section-title">Tools I've Built</h2>
-        <p class="section-sub">Custom software I've built to solve real business problems auditing stores, optimising profiles, analysing channels, generating content, and improving site performance. Each tool replaces hours of manual work.</p>
+        <p class="section-sub">Custom software engineered to replace hours of manual work — from auditing stores and profiles to generating content and driving growth. Every tool solves a real, specific problem.</p>
       </div>
       <a href="#contact" class="btn-blue" style="white-space:nowrap;flex-shrink:0;">
         <span>Get a Custom Quote</span>
@@ -540,9 +540,24 @@
       </a>
     </div>
 
-    <div class="tools-bento">
+    <!-- Filter Tabs -->
+    <div class="tools-filters reveal" id="toolFilters">
+      <button class="tf-btn active" data-filter="all">All <span class="tf-count">12</span></button>
+      <button class="tf-btn" data-filter="E-Commerce">E-Commerce <span class="tf-count">1</span></button>
+      <button class="tf-btn" data-filter="Career">Career <span class="tf-count">2</span></button>
+      <button class="tf-btn" data-filter="SEO">SEO <span class="tf-count">1</span></button>
+      <button class="tf-btn" data-filter="Conversion">Conversion <span class="tf-count">1</span></button>
+      <button class="tf-btn" data-filter="YouTube">YouTube <span class="tf-count">2</span></button>
+      <button class="tf-btn" data-filter="Branding">Branding <span class="tf-count">1</span></button>
+      <button class="tf-btn" data-filter="WordPress">WordPress <span class="tf-count">1</span></button>
+      <button class="tf-btn" data-filter="Performance">Performance <span class="tf-count">1</span></button>
+      <button class="tf-btn" data-filter="Content">Content <span class="tf-count">2</span></button>
+    </div>
 
-      <div class="tool-card reveal" style="--i:0">
+    <div class="tools-grid" id="toolsGrid">
+
+      <!-- Shopify Audit Pro -->
+      <div class="tool-card reveal" data-category="E-Commerce" style="--i:0">
         <div class="tool-img-wrap">
           <img src="img/tools/shopify.webp" alt="Shopify Audit Pro" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F6CD;&#xFE0F;</span></div>
@@ -550,12 +565,13 @@
         <div class="tool-body">
           <div class="tool-tag">E-Commerce</div>
           <h3 class="tool-name">Shopify Audit Pro</h3>
-          <p class="tool-desc">Deep-dives into any Shopify store and surfaces speed bottlenecks, SEO gaps, conversion killers, and missing trust signals with a prioritised fix list.</p>
+          <p class="tool-desc">Runs a full technical audit on any Shopify store — surfaces speed bottlenecks, SEO gaps, missing trust signals, and conversion killers, then delivers a prioritised fix list so store owners know exactly what to fix first.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>PageSpeed API</span><span>React</span></div>
         </div>
       </div>
 
-      <div class="tool-card reveal" style="--i:1">
+      <!-- LinkedIn Optimizer -->
+      <div class="tool-card reveal" data-category="Career" style="--i:1">
         <div class="tool-img-wrap">
           <img src="img/tools/linkedin.webp" alt="LinkedIn Optimizer" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F4BC;</span></div>
@@ -563,12 +579,13 @@
         <div class="tool-body">
           <div class="tool-tag">Career</div>
           <h3 class="tool-name">LinkedIn Optimizer</h3>
-          <p class="tool-desc">Scores a LinkedIn profile across headline, about, experience and skills then delivers complete copy paste rewrites optimised for the 2026 algorithm.</p>
+          <p class="tool-desc">Scores a LinkedIn profile across headline, about section, experience, and skills — then generates complete, copy-paste rewrites optimised for the 2026 algorithm, plus a downloadable PDF report with every improvement.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>React</span><span>jsPDF</span></div>
         </div>
       </div>
 
-      <div class="tool-card reveal" style="--i:2">
+      <!-- Website CRO Auditor -->
+      <div class="tool-card reveal" data-category="Conversion" style="--i:2">
         <div class="tool-img-wrap">
           <img src="img/tools/croauditor.webp" alt="Website CRO Auditor" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F4C8;</span></div>
@@ -576,12 +593,13 @@
         <div class="tool-body">
           <div class="tool-tag">Conversion</div>
           <h3 class="tool-name">Website CRO Auditor</h3>
-          <p class="tool-desc">Audits any website for conversion rate weaknesses analyses layout, CTAs, trust signals, and page structure, outputting a scored report with exact fixes.</p>
+          <p class="tool-desc">Scans any website for conversion rate weaknesses — analyses layout structure, CTAs, trust signals, and page flow, then outputs a scored report with specific, actionable fixes ranked by impact.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Node.js</span></div>
         </div>
       </div>
 
-      <div class="tool-card tool-card--wide reveal" style="--i:3">
+      <!-- SEO Auditor -->
+      <div class="tool-card reveal" data-category="SEO" style="--i:3">
         <div class="tool-img-wrap">
           <img src="img/tools/seo.webp" alt="SEO Auditor" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F50D;</span></div>
@@ -589,12 +607,13 @@
         <div class="tool-body">
           <div class="tool-tag">SEO</div>
           <h3 class="tool-name">SEO Auditor</h3>
-          <p class="tool-desc">Crawls any URL and checks meta tags, heading structure, canonical tags, schema markup, image alt text, and Core Web Vitals scoring each and recommending exact fixes for higher rankings.</p>
+          <p class="tool-desc">Crawls any URL and checks meta tags, heading structure, canonical tags, schema markup, image alt text, and Core Web Vitals — scores each element and recommends precise fixes for higher search rankings.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>Google APIs</span><span>React</span></div>
         </div>
       </div>
 
-      <div class="tool-card reveal" style="--i:4">
+      <!-- YouTube Channel Auditor -->
+      <div class="tool-card reveal" data-category="YouTube" style="--i:4">
         <div class="tool-img-wrap">
           <img src="img/tools/youtube.webp" alt="YouTube Channel Auditor" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x25B6;&#xFE0F;</span></div>
@@ -602,12 +621,13 @@
         <div class="tool-body">
           <div class="tool-tag">YouTube</div>
           <h3 class="tool-name">YouTube Channel Auditor</h3>
-          <p class="tool-desc">Analyses a YouTube channel's branding, upload frequency, titles, thumbnails, and engagement, then returns a prioritised growth action plan with exact fixes for each weak spot, so you know precisely what to change to get more views, subscribers, and watch time.</p>
+          <p class="tool-desc">Analyses a YouTube channel's branding, upload frequency, titles, thumbnails, and engagement metrics — then returns a prioritised growth action plan with exact fixes for each weak spot to increase views, subscribers, and watch time.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>YouTube API</span><span>React</span></div>
         </div>
       </div>
 
-      <div class="tool-card reveal" style="--i:5">
+      <!-- Profile Pro -->
+      <div class="tool-card reveal" data-category="Branding" style="--i:5">
         <div class="tool-img-wrap">
           <img src="img/tools/profilepro.webp" alt="Profile Pro" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F464;</span></div>
@@ -615,12 +635,13 @@
         <div class="tool-body">
           <div class="tool-tag">Branding</div>
           <h3 class="tool-name">Profile Pro</h3>
-          <p class="tool-desc">Rewrites freelancer bios, social profiles, and about pages to be client-focused, keyword rich, and conversion optimised for any platform. Also crafts Fiverr and Upwork gig descriptions that rank higher in search, and writes winning proposals that get responses not ignored.</p>
+          <p class="tool-desc">Rewrites freelancer bios, social profiles, and about pages to be client-focused, keyword-rich, and conversion-optimised for any platform. Also crafts Fiverr and Upwork gig descriptions that rank higher in search and writes winning proposals that get responses.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Node.js</span></div>
         </div>
       </div>
 
-      <div class="tool-card tool-card--wide reveal" style="--i:6">
+      <!-- WordPress Optimizer -->
+      <div class="tool-card reveal" data-category="WordPress" style="--i:6">
         <div class="tool-img-wrap">
           <img src="img/tools/wordpress.webp" alt="WordPress Optimizer" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F527;</span></div>
@@ -628,12 +649,13 @@
         <div class="tool-body">
           <div class="tool-tag">WordPress</div>
           <h3 class="tool-name">WordPress Optimizer</h3>
-          <p class="tool-desc">Audits a WordPress site for speed, plugin bloat, security vulnerabilities, and SEO health then generates a specific, step by step optimisation plan with plugin recommendations.</p>
+          <p class="tool-desc">Audits a WordPress site for speed issues, plugin bloat, security vulnerabilities, and SEO health — then generates a specific, step-by-step optimisation plan with plugin recommendations and priority rankings.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>PageSpeed API</span><span>React</span></div>
         </div>
       </div>
 
-      <div class="tool-card reveal" style="--i:7">
+      <!-- Image Optimizer -->
+      <div class="tool-card reveal" data-category="Performance" style="--i:7">
         <div class="tool-img-wrap">
           <img src="img/tools/imgoptimizer.webp" alt="Image Optimizer" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F5BC;&#xFE0F;</span></div>
@@ -641,21 +663,64 @@
         <div class="tool-body">
           <div class="tool-tag">Performance</div>
           <h3 class="tool-name">Image Optimizer</h3>
-          <p class="tool-desc">Bulk compresses and converts images to WebP with lossless quality control  slashing page load times without sacrificing visual fidelity.</p>
+          <p class="tool-desc">Bulk-compresses and converts images to WebP format with lossless quality control — drastically cutting page load times without any visible loss in image quality.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>Sharp</span><span>Node.js</span></div>
         </div>
       </div>
 
-      <div class="tool-card reveal" style="--i:8">
+      <!-- YouTube TTS Generator -->
+      <div class="tool-card reveal" data-category="YouTube" style="--i:8">
         <div class="tool-img-wrap">
           <img src="img/tools/youtubetts.webp" alt="YouTube TTS Generator" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
           <div class="tool-img-placeholder"><span>&#x1F3A4;</span></div>
         </div>
         <div class="tool-body">
-          <div class="tool-tag">Content</div>
+          <div class="tool-tag">YouTube</div>
           <h3 class="tool-name">YouTube TTS Generator</h3>
-          <p class="tool-desc">Transforms scripts or topics into natural sounding voiceover audio ready for YouTube with tone, pacing, and style controls built in.</p>
+          <p class="tool-desc">Transforms scripts or raw topics into natural-sounding voiceover audio ready for YouTube upload — with full control over tone, pacing, and delivery style built directly into the interface.</p>
           <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Node.js</span></div>
+        </div>
+      </div>
+
+      <!-- X Content Engine -->
+      <div class="tool-card reveal" data-category="Content" style="--i:9">
+        <div class="tool-img-wrap">
+          <img src="img/tools/xcontentengine.webp" alt="X Content Engine" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
+          <div class="tool-img-placeholder"><span>&#x1D54F;</span></div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-tag">Content</div>
+          <h3 class="tool-name">X Content Engine</h3>
+          <p class="tool-desc">Generates high-performing X (Twitter) posts and comments built around real personal experience — following the platform's algorithm signals for saves, replies, and shares. Includes post generator and comment generator tabs.</p>
+          <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Gemini API</span></div>
+        </div>
+      </div>
+
+      <!-- Reddit Content Engine -->
+      <div class="tool-card reveal" data-category="Content" style="--i:10">
+        <div class="tool-img-wrap">
+          <img src="img/tools/redditcontentengine.webp" alt="Reddit Content Engine" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
+          <div class="tool-img-placeholder"><span>&#x1F4AC;</span></div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-tag">Content</div>
+          <h3 class="tool-name">Reddit Content Engine</h3>
+          <p class="tool-desc">Generates community-native Reddit posts that follow each subreddit's unwritten rules — with ban risk scoring, best posting times, and a subreddit finder that matches your content to the right communities automatically.</p>
+          <div class="tool-stack"><span>Next.js</span><span>TypeScript</span><span>React</span><span>Gemini API</span></div>
+        </div>
+      </div>
+
+      <!-- Learn Tailwind Fast -->
+      <div class="tool-card reveal" data-category="Career" style="--i:11">
+        <div class="tool-img-wrap">
+          <img src="img/tools/learntailwind.webp" alt="Learn Tailwind Fast" class="tool-img" onerror="this.parentElement.classList.add('no-img')">
+          <div class="tool-img-placeholder"><span>&#x1F393;</span></div>
+        </div>
+        <div class="tool-body">
+          <div class="tool-tag">Career</div>
+          <h3 class="tool-name">Learn Tailwind Fast</h3>
+          <p class="tool-desc">A complete interactive Tailwind CSS course — 10 structured lessons covering everything from installation to real components, with live examples, practice exercises, and show/hide solutions built directly into the interface.</p>
+          <div class="tool-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Tailwind CSS</span></div>
         </div>
       </div>
 
